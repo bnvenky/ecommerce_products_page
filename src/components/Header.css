@@ -1,0 +1,142 @@
+/* Header styling */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header content layout */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Logo styling */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Navigation menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background-color: #f9f9f9;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 30px;
+  background-color: transparent;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search-bar button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-bar button:hover img {
+  transform: scale(1.1);
+}
+
+/* User action buttons */
+.user-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-button img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-button:hover img {
+  transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .user-actions {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-actions {
+    gap: 15px;
+  }
+}
